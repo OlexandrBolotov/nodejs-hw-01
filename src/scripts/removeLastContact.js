@@ -9,10 +9,8 @@ export const removeLastContact = async () => {
         }
         const updatedContacts = existingContacts.slice(0, -1);
         await writeContacts(updatedContacts);
-        console.log("Останній контакт був успішно видалений.");
-        console.log(`Загальна кількість контактів: ${updatedContacts.length}`);
     } catch (error) {
-        console.error("Помилка при видаленні останнього контакту:", error.message);
+        console.error(error.message);
     }
 };
 

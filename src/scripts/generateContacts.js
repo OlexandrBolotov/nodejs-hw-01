@@ -8,8 +8,7 @@ const generateContacts = async (number) => {
     const newContacts = Array.from({ length: number }, () => createFakeContact());
     const updatedContacts = [...existingContacts, ...newContacts];
     await writeContacts(updatedContacts);
-    console.log(`Згенеровано та збережено ${number} нових контактів.`);
-    console.log(`Загальна кількість контактів: ${updatedContacts.length}`);
+
 };
 
 generateContacts(2

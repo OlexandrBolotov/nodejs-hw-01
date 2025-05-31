@@ -3,10 +3,9 @@ export const countContacts = async () => {
     try {
         const contacts = await readContacts();
         const count = contacts.length;
-        console.log(`Загальна кількість контактів:`);
         return count;
     } catch (error) {
-        console.error("Помилка при підрахунку контактів:", error.message);
+        console.error(error.message);
         return 0;
     }
 };
